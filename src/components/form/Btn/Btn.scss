@@ -1,0 +1,18 @@
+.btn {
+  background: #6767bc;
+  color: #fff;
+  text-transform : uppercase;
+  font-weight : 500;
+  border: none;
+  padding : .7em 2em;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow .2s, background .2s;
+
+  &:hover {
+    background: #7b7bd2;
+    box-shadow: 0 0 5px 2px rgba(103, 103, 188, 0.5);
+    transition: box-shadow .2s, background .2s;
+  }
+}

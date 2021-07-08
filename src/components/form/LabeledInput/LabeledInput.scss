@@ -1,0 +1,41 @@
+.labeled-text-input {
+
+}
+
+.labeled-text-input__label {
+
+}
+
+.labeled-text-input__title {
+  margin-bottom : 5px;
+  font-weight : 500;
+
+  &.this--invalid {
+    animation: invalid-title .3s forwards;
+  }
+
+  &.this--center {
+    text-align: center;
+  }
+}
+
+@keyframes invalid-title {
+  0% {
+    transform: translateX(0);
+  }
+
+  30% {
+    color: red;
+    transform: translateX(3px);
+  }
+
+  70% {
+    color: red;
+    transform: translateX(-5px);
+  }
+
+  100% {
+    color: red;
+    transform: translateX(0);
+  }
+}

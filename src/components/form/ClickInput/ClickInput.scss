@@ -1,0 +1,50 @@
+.click-input {
+  display: flex;
+  align-items: center;
+}
+
+.click-input__decrease, .click-input__increase {
+  position: relative;
+  width : 20px;
+  background: #6767bc;
+  cursor: pointer;
+  user-select: none;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-top : 100%;
+  }
+
+  &::after {
+    display: inline;
+    color: #fff;
+    font-size : 16px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    background: #7b7bd2;
+  }
+}
+
+.click-input__decrease {
+
+  &::after {
+    content: "-";
+  }
+}
+
+.click-input__increase {
+
+  &::after {
+    content: "+";
+  }
+}
+
+.click-input__value {
+  margin : 0 10px;
+}
