@@ -1,18 +1,23 @@
-import React, {ChangeEvent} from 'react';
+import React from 'react';
 
 import '../Input.scss';
 
 type InputProps = {
-    onChange?: (event: React.ChangeEvent) => void;
+    onChange?: (newValue: string) => void;
     value?: string;
     placeholder?: string
 }
 
 const TextInput: React.FC<InputProps> = ({onChange, value, placeholder}) => {
+
+    function changeValue(e: React.ChangeEvent<HTMLInputElement>) {
+        if(typeof onChange !== "undefined") onChange(e.target.value || '');
+    }
+
     return <input
         className={"input"}
         type="text"
-        onChange={onChange}
+        onChange={changeValue}
         value={value}
         placeholder={placeholder}
     />

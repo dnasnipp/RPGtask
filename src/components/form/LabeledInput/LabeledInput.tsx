@@ -3,7 +3,7 @@ import React, {ReactElement} from 'react';
 import './LabeledInput.scss';
 
 type LabeledTextInputProps = {
-    title: string;
+    title: string | ReactElement;
     titleCenter?: boolean;
     invalid?: boolean;
     children: ReactElement;

@@ -1,0 +1,23 @@
+.bar {
+  position: relative;
+}
+
+.bar__current {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height : 100%;
+  z-index: 2;
+  border-radius: 10px;
+  transition: width .2s;
+}
+
+.bar__text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight : 500;
+  z-index: 3;
+}

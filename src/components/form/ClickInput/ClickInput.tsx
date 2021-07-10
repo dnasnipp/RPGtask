@@ -26,9 +26,9 @@ const ClickInput: React.FC<ClickInputProps> = ({value = 0 , step = 1, minValue, 
 
     return (
         <div className="click-input">
-            <div className="click-input__decrease" onClick={changeValue.bind(null, value-step)}></div>
+            <div className="click-input__decrease" onClick={changeValue.bind(null, value-step)}/>
             <div className="input click-input__value">{value}</div>
-            <div className="click-input__increase" onClick={changeValue.bind(null, value+step)}></div>
+            <div className="click-input__increase" onClick={changeValue.bind(null, value+step)}/>
         </div>
     )
 }
